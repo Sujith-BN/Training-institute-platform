@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gqt</title>
+    <!--------------Animations------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-------------Cdn Fontawesome--------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-------------Cdn Fontawesome--------------------------->
+    <!-------------Font from google-------------------------->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-------------Font from google--------------------------->
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+</head>
+
+
+
+
+
+<body>
+<!-------------------------Navigation bar code----------------------------------->
+    <div class="nav-container animate__animated  animate__backInLeft">
+        <div class="logo-and-name">
+            <img src="logo.jpeg" alt="Image Not Available" height="70px" width="70px" style="border-radius: 50%; ">
+            <a href="" style="text-decoration: none;font-size: 25px;"><h1 style="color: white;font-weight: 600; padding: 10px;">GQT</h1></a> 
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="item"><a href="index.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li class="item"><a href="" style="text-decoration: none;color: white;">About</a></li>
+            <li class="item"><a href="explore.html" style="text-decoration: none;color: white;">Courses</a></li>
+            <li class="item"><a href="" style="text-decoration: none;color: white;">Contact</a></li>
+            <li><i class="icon fa-solid fa-bars" style="color: white;font-size: 25px;" id="hamburgerIcon"></i></li>
+        </ul>
+    </div>
+<!-------------------------Navigation bar code----------------------------------->
+    
+<!------------------------- Hamburger menu --------------------------------------->
+    <div class="hamburger-menu animate__animated animate__bounceInDown " id="hamburgerMenu" >
+        <i class="close-btn fa-solid fa-times " id="closeBtn"></i>
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li><a href="" style="text-decoration: none;color: white;">About</a></li>
+            <li><a href="explore.html" style="text-decoration: none;color: white;">Courses</a></li>
+            <li><a href="" style="text-decoration: none;color: white;">Contact</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+        }
+        
+        hamburgerIcon.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking outside
+        hamburgerMenu.addEventListener('click', function(e) {
+            if (e.target === hamburgerMenu) {
+                toggleMenu();
+            }
+        });
+    </script>
+
+<!-------------------------Navigation bar code end----------------------------------->
+
+
+
+
+
+
+
+
+<!--------------------------Content part------------------------------------------->
+    <div class="second-part" style="color: white;margin-left: 95px;margin-top: 40px; display: flex;">
+        <!------------------------------------>
+        <div class="sp-box-1">
+            <div class="heading animate__animated animate__fadeInDown">
+                <h1>Upskill Your Profile And Increase <br>Your Earning Potential .</h1>
+            </div>
+            <div class="below-heading animate__animated animate__backInUp " style="margin-top: 20px;letter-spacing: 0.7px;">
+                <h3 style="font-weight: 300;">Get hands-on learning from industry experts and amplify your earning <br> potential with skill-based training and project-certified courses with <br> complete placement assistance .</h3>
+            </div>
+            <div class="below-heading-button" style="margin-top: 50px;">
+                <a href="explore.html"><input type="submit" value="Get Started" style="padding: 14px;border-radius: 27px;width: 170px;font-size: 20px;"></a>
+            </div>  
+        </div>
+        <!------------------------------------->
+        <div class="sp-box-2  animate__animated animate__backInRight" style="margin-left: 50px;">
+            <img src="hero.webp" alt="Image Not Available" height="350px" width="450px" >
+        </div>
+        <!------------------------------------->
+ 
+    </div>
+    <div style="color: white; margin-left: 95px; margin-top: 30px;margin-bottom: 95px;">
+    <h2 style="font-size: 34px; font-weight: 600;"><span class="typewriter" id="typewriter"></span></h2>
+    </div>
+    <script>
+       
+
+        const roles = [      
+            "Curriculum Designed for Industry Applications. ",
+            "Live Training with the Corporate Experts.", 
+            "Frequent Mock Interviews and Tests.",
+            "2000+ Hiring Partners."
+        ];
+
+        let currentRoleIndex = 0;
+        const typewriterElement = document.getElementById('typewriter');
+
+        function changeRole() {
+            // Fade out current text
+            typewriterElement.style.opacity = '0';
+            typewriterElement.style.transform = 'translateY(-10px)';
+            
+            setTimeout(() => {
+                // Change text
+                typewriterElement.textContent = roles[currentRoleIndex];
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                
+                // Fade in new text
+                typewriterElement.style.opacity = '1';
+                typewriterElement.style.transform = 'translateY(0)';
+            }, 200);
+        }
+
+        // Add smooth transition CSS
+        typewriterElement.style.transition = 'all 0.3s ease';
+
+        // Start the effect
+        changeRole();
+        setInterval(changeRole, 2000); // Change every 2 seconds
+        </script>
+        
+            
+<!----------------------Content part end------------------------------------------->
+<!---------------------------------------------------------------------------------->
+
+<!------------------------About Courses---------------------------------------------->
+
+<div class="about-courses" style="color: white;height: 200px;width: 80%;margin: 30px auto;text-align: center;">
+    <div class="third-box-1">
+        <h1 >Courses in Demand</h1>
+    </div>
+    <div class="third-box-2" style="margin-top: 20px;letter-spacing: 0.6px;">
+        <h3 style="font-weight: 280;">Our IT and non-IT courses are expertly crafted, covering foundational to advanced levels, guaranteeing students a comprehensive understanding. We invite you to explore our highly engaging specialized programs.</h3>
+    </div>
+</div>
+<!------------------------About Courses end---------------------------------------------->
+
+<!-------------------------------------Course Cards---------------------------------------->
+<div class="card" style="display: flex; flex-wrap: wrap;justify-content: center;">
+    <div class="common card1">
+        <img src="card1.webp" alt="Image not available" height="200px" width="400px" style="border-radius: 90%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+        <h1 style="color: white;text-align: center  ;padding: 20px;">Unified Course 1</h1>
+        <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">Learn with our Unified Course 1 specialty and lay the right basis for your software development career.</h3>
+        
+        </div>
+    <div class="common card2">
+        <img src="card2.jpg" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+        <h1 style="color: white;text-align: center  ;padding: 20px;">Unified Course 2</h1>
+        <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">Develop your hard and soft talents, as well as stay current with application-based projects, to be competitive in the software development business.</h3>
+    </div>
+    <div class="common card3">
+        <img src="card3.avif" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+        <h1 style="color: white;text-align: center  ;padding: 20px;">Data Science</h1>
+        <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">Establish yourself and update your skills as a data scientist with core skills, followed by the relevant programming languages.</h3>
+    </div>
+    <div class="common card4">
+        <img src="card4.avif" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+        <h1 style="color: white;text-align: center  ;padding: 20px;">DevOps</h1>
+        <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">From the foundational introductions to the essentials of cloud computing, learn the development and operations of the virtual data.</h3>
+    </div>
+    <div class="common card5">
+        <img src="card5.avif" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+        <h1 style="color: white;text-align: center  ;padding: 20px;">PF Course - 1</h1>
+         <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">Learn the foundations of programming and algorithms with Programming Fundamental Course-1 and prepare yourself for hands-on applications of theoretical learning.</h3>
+    </div>
+    <div class="common card6">
+        <img src="card6.avif" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+        <h1 style="color: white;text-align: center  ;padding: 20px;">MBA training</h1>
+        <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">MBA Training for the HR and Finance industry to prepare yourself for the corporate and acquire the professional training for modern management principles.</h3>
+    </div>
+</div>
+<!-----------------------------------------end of cards------------------------>
+
+
+<!---------------------------Advantages--------------------------------------->
+<div class="adv">
+    <h1>Global Quest Technologies Advantages</h1>
+    <p>With Global Quest Technologies, you get what is required to stay ahead in the race. You don’t only learn what is necessary to be an expert but also receive complete guidance throughout the way so that you know the directions.</p>
+</div>
+
+<!--------------------------------------Advantages end---------------------------->
+
+
+<!---------------------------------------------Box-------------------------------->
+    <div class="comparison-table">
+        <div class="table-header">
+            <div class="header-cell">Advantage</div>
+            <div class="header-cell">GQTech</div>
+            <div class="header-cell">Others</div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Experienced Faculty (SMEs)</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Comprehensive Curriculum</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Hands-on Learning Experience</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Smooth and Student-Friendly Interface</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">100% Placement Assistance</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Build real-time Projects</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Interview cracking skills</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Course completion certificate</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+        
+        <div class="table-row">
+            <div class="table-cell advantage-cell">Campus to Corporate Etiquettes</div>
+            <div class="table-cell icon-cell">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="table-cell icon-cell">
+                <span class="close-icon">✗</span>
+            </div>
+        </div>
+    </div>
+    <!------------------------end of the box----------------->
+
+ <div class="why">
+        <h1>Why Global Quest Technologies - GQT?</h1>
+        <div class="one">    
+            <div class="l1">
+                <h1>Meet and Mingle<br>With Industry Experts</h1>
+                <p>Interact directly with experts. Get proper training and answers to all your questions regarding the industry and its essentials.</p>
+            </div>
+            <div class="l2">
+                <h1>360° Placement<br>Assistance</h1>
+                <p>We provide our students with complete assistance with the placement, from preparing for the interview to finding the right roles until they land a great job.</p>
+            </div>
+        </div>
+       
+        <div class="twoo">
+            <div class="l3">
+                <h1>Real-time<br>Corporate Merge</h1>
+                <p>Build and enhance your profile and get real-time corporate experience to understand the operations and applications in the industry</p>
+            </div>
+            <div class="l4">
+                <h1>Personalised<br>Mentorship</h1>
+                <p>With a personalised approach to training, we provide our students with the mentorship for their personal development as an expert</p>
+            </div>
+        </div>
+    </div>
+
+<!-----------------------------------legends cards---------------------------------->
+
+
+     <h1 style="color: white;text-align: center;font-size: 45px;padding: 10px;">Corporate Social Responsibility Drive- Motive of the Mission</h1>
+
+ <div class="corp">
+        
+        <div class="same c1">
+            <img src="maatha.webp" alt="Image not available" height="200px" width="297px" style="border-top-left-radius: 30px;border-top-right-radius: 30px;">
+            <h1 style="color: white;text-align: center;font-size: 20px;padding: 10px;">Bharath Matha</h1>
+            <p style="color: white;text-align: center;font-size: 15px;padding: 10px;font-weight: 300;">“Motherland of myriad cultures, stands as a beacon of unity, diversity, and progress.</p>
+        </div>
+        <div class="same c2"><img src="swami.webp" alt="Image not available" height="200px" width="297px"           style="border-top-left-radius: 30px;border-top-right-radius: 30px;">
+            <h1 style="color: white;text-align: center;font-size: 20px;padding: 10px;">Swami Vivekananda</h1>
+            <p style="color: white;text-align: center;font-size: 15px;padding: 10px;font-weight: 300;">“Experience is the only teacher we have. We may talk and reason all our lives, but we shall not understand a word of truth.”</p>
+        </div>
+        <div class="same c3"><img src="abdul.webp" alt="Image not available" height="200px" width="297px" style="border-top-left-radius: 30px;border-top-right-radius: 30px;">
+            <h1 style="color: white;text-align: center;font-size: 20px;padding: 10px;">Dr.A.P.J.Abdul Kalam Sir</h1>
+            <p style="color: white;text-align: center;font-size: 15px;padding: 10px;font-weight: 300;">“All of us do not have equal talent. But,  all of us have an equal opportunity to develop our talents.”</p>
+        </div>
+        <div class="same c4"><img src="puni.webp" alt="Image not available" height="200px" width="297px" style="border-top-left-radius: 30px;border-top-right-radius: 30px;">
+            <h1 style="color: white;text-align: center;font-size: 20px;padding: 10px;">Dr.Puneeth Rajkumar</h1>
+             <p style="color: white;text-align: center;font-size: 15px;padding: 10px;font-weight: 300;">“Stop Waiting For The Right Time. Time Isn’t Waiting For You.”  </p>
+    </div>
+    </div>
+    <!------------------------------------------------carousel--------------------->
+
+    
+   
+     <h1 style="color: white;text-align: center;font-size: 45px;padding: 10px;">Where Our Alumni Work</h1>
+
+     <div class="company">
+
+        <div class="com1" style="display: flex;align-items: center;justify-content: center;margin-top: 50px;">
+
+            <img src="wip.webp" alt="Image not available" style="background-image:cover ;border-radius: 30px;box-shadow: 5px 5px 25px wheat;">
+        </div>
+     </div>
+
+     <!-----------------------------------Ends here---------------------------->
+
+     
+     <hr style="margin-top: 60px;margin-bottom: 50px;">
+     <div class="finalfoot" style="text-align: center;margin-bottom: 30px;">
+        <h1 style="color: white;font-size: 20px;font-weight: 300;">GQT | Copyright © 2025 Global Quest Technologies, Training & Placements. All Rights Reserved.</h1>
+        <h1  style="color: white;font-size: 15px;font-weight: 300;margin-top: 5PX;">Made By Sujith BN</h1>
+     </div>
+
+    
+
+</body>
+</html>

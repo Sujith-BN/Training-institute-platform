@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gqt</title>
+    <!--------------Animations------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-------------Cdn Fontawesome--------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-------------Cdn Fontawesome--------------------------->
+    <!-------------Font from google-------------------------->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-------------Font from google--------------------------->
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+<!-------------------------Navigation bar code----------------------------------->
+    <div class="nav-container animate__animated  animate__backInLeft">
+        <div class="logo-and-name">
+            <img src="logo.jpeg" alt="Image Not Available" height="70px" width="70px" style="border-radius: 50%; ">
+            <a href="index.html" style="text-decoration: none;font-size: 25px;"><h1 style="color: white;font-weight: 600; padding: 10px;">GQT</h1></a> 
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="item"><a href="index.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li class="item"><a href="" style="text-decoration: none;color: white;">About</a></li>
+            <li class="item"><a href="explore.html" style="text-decoration: none;color: white;">Courses</a></li>
+            <li class="item"><a href="" style="text-decoration: none;color: white;">Contact</a></li>
+            <li><i class="icon fa-solid fa-bars" style="color: white;font-size: 25px;" id="hamburgerIcon"></i></li>
+        </ul>
+    </div>
+<!-------------------------Navigation bar code----------------------------------->
+    
+<!------------------------- Hamburger menu --------------------------------------->
+    <div class="hamburger-menu animate__animated animate__bounceInDown " id="hamburgerMenu" >
+        <i class="close-btn fa-solid fa-times " id="closeBtn"></i>
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li><a href="" style="text-decoration: none;color: white;">About</a></li>
+            <li><a href="explore.html" style="text-decoration: none;color: white;">Courses</a></li>
+            <li><a href="" style="text-decoration: none;color: white;">Contact</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+        }
+        
+        hamburgerIcon.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking outside
+        hamburgerMenu.addEventListener('click', function(e) {
+            if (e.target === hamburgerMenu) {
+                toggleMenu();
+            }
+        });
+    </script>
+
+    <div class="card" style="display: flex; flex-wrap: wrap;justify-content: center;">
+        <div class="common card1 animate__animated animate__slideInLeft">
+            <img src="Pythonimage.jpeg" alt="Image not available" height="200px" width="400px" style="border-radius: 90%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Python</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px"> Build the skills for tomorrow's tech landscape with our comprehensive, hands-on course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button>
+                </a>
+            
+            </div>
+        <div class="common card2 animate__animated animate__slideInUp">
+            <img src="java.jpeg" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Java</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px"> Build the skills for tomorrow's enterprise landscape with our comprehensive, hands-on Java course. </h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px; margin-top: 50px;">Enroll Now</button></a>
+        </div>
+        <div class="common card3 animate__animated animate__slideInRight">
+            <img src="dataimage.jpg" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Data Science</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">  Build the skills for tomorrow's data-driven landscape with our comprehensive, hands-on Data Science course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button></a>
+        </div>
+        <div class="common card4 animate__animated animate__slideInLeft">
+            <img src="card4.avif" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">DevOps</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px"> Build the skills for tomorrow's automated delivery landscape with  hands-on DevOps course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px; margin-top: 50px;">Enroll Now</button></a>
+        </div>
+        <div class="common card5 animate__animated animate__slideInUp">
+            <img src="Frontendimage.png" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Frontend</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px"> Build the skills for tomorrow's interactive web landscape with our comprehensive, hands-on Frontend course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button></a>
+        </div>
+        <div class="common card6 animate__animated animate__slideInRight">
+            <img src="cpp.png" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">C++</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px"> Build the skills for tomorrow's high-performance computing landscape with our comprehensive, hands-on C++ course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button></a>
+        </div>
+        <div class="common card7 animate__animated animate__slideInLeft">
+            <img src="soft.webp" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Software Testing</h1> 
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">Build the skills for tomorrow's quality assurance landscape with our comprehensive, hands-on Software Testing course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button></a>
+            
+        </div>
+        <div class="common card8 animate__animated v">
+            <img src="my.png" alt="Image not available" height="200px" width="200px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Mysql</h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">Build the skills for tomorrow's data management landscape with our comprehensive, hands-on MySQL course.</h3>
+            <a href="application.html"><button class="btn" style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button></a>
+        </div>
+        <div class="common card6 animate__animated animate__slideInRight">
+            <img src="ap.jpg" alt="Image not available" height="200px" width="400px" style="border-radius: 50%;margin-left: 85px;margin-top: 20px;border: 2px solid rgb(120, 103, 12);">
+            <h1 style="color: white;text-align: center  ;padding: 20px;">Aptitude     </h1>
+            <h3 style="color: white;text-align: center; font-weight: 300;font-size: 15px;padding: 10px">  Build the skills for tomorrow's problem-solving landscape with our comprehensive, hands-on Aptitude course.</h3>
+            <a href="application.html"><button class="btn"style="padding: 20px;border-radius: 24px; background-image: linear-gradient(90deg,rgb(33, 33, 156),rgb(0, 0, 0));color: white;border: 2px gold;font-size: 18px;margin-top: 50px;">Enroll Now</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

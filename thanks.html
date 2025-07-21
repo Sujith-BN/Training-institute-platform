@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gqt</title>
+    <!--------------Animations------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-------------Cdn Fontawesome--------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-------------Cdn Fontawesome--------------------------->
+    <!-------------Font from google-------------------------->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-------------Font from google--------------------------->
+    <link rel="stylesheet" href="style1.css">
+
+
+
+    
+</head>
+
+
+
+
+
+<body>
+<!-------------------------Navigation bar code----------------------------------->
+    <div class="nav-container animate__animated  animate__backInLeft">
+        <div class="logo-and-name">
+            <img src="logo.jpeg" alt="Image Not Available" height="70px" width="70px" style="border-radius: 50%; ">
+            <a href="index.html" style="text-decoration: none;font-size: 25px;"><h1 style="color: white;font-weight: 600; padding: 10px;">GQT</h1></a> 
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="item"><a href="index.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li class="item"><a href="" style="text-decoration: none;color: white;">About</a></li>
+            <li class="item"><a href="explore.html" style="text-decoration: none;color: white;">Courses</a></li>
+            <li class="item"><a href="" style="text-decoration: none;color: white;">Contact</a></li>
+            <li><i class="icon fa-solid fa-bars" style="color: white;font-size: 25px;" id="hamburgerIcon"></i></li>
+        </ul>
+    </div>
+<!-------------------------Navigation bar code----------------------------------->
+    
+<!------------------------- Hamburger menu --------------------------------------->
+    <div class="hamburger-menu animate__animated animate__bounceInDown " id="hamburgerMenu" >
+        <i class="close-btn fa-solid fa-times " id="closeBtn"></i>
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;color: white;">Home</a></li>
+            <li><a href="" style="text-decoration: none;color: white;">About</a></li>
+            <li><a href="explore.html" style="text-decoration: none;color: white;">Courses</a></li>
+            <li><a href="" style="text-decoration: none;color: white;">Contact</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    <script>
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+        }
+        
+        hamburgerIcon.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking outside
+        hamburgerMenu.addEventListener('click', function(e) {
+            if (e.target === hamburgerMenu) {
+                toggleMenu();
+            }
+        });
+    </script>
+
+        <style>
+        body{
+            background-attachment:rgb(3, 3, 30);;
+        }
+        .box{
+            height: 450px;
+            width: 400px;
+            border: 2px solid white;
+            border-radius: 30px;
+             margin: 50px auto   ;
+            box-shadow: 5px 5px 25px whitesmoke;
+    }
+           
+        .box h1{
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .box .boxes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .box .boxes input{
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 13px;
+            border-radius: 30px;
+        }
+        .box .boxes .btn input{
+            padding: 20px;
+        }
+         .box .boxes .btn input:hover{
+            
+            background-color: gray;
+        }
+         .box .boxes  input:hover{
+            color: black;
+           
+            cursor: pointer;
+        }
+         .box .boxes  input:hover::placeholder{
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .thanks h1 {
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 800px;
+            padding: 20px;
+            border: 2px solid wheat;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px wheat;
+            margin: 40px auto;
+        }
+        .b button{
+            transition: all 0.4s;
+        }
+         .b  button:hover{
+            transform: scale(1.1,1.1);
+
+            background-color: white;
+            cursor: pointer;
+        }
+        
+
+        /* Responsive Design for Thanks Box */
+@media (max-width: 768px) {
+    .thanks {
+        padding: 15px;
+        max-width: 90%;
+        margin: 30px auto;
+    }
+
+    .thanks h1 {
+        font-size: 18px;
+        padding: 12px;
+        max-width: 100%;
+        border: 1px solid wheat;
+        box-shadow: 0 0 10px rgba(245, 222, 179, 0.5);
+    }
+
+    .b button {
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 8px;
+        border: 1px solid wheat;
+    }
+}
+
+@media (max-width: 480px) {
+    .thanks {
+        padding: 10px;
+        max-width: 95%;
+        margin: 20px auto;
+    }
+
+    .thanks h1 {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 100%;
+        border: 1px solid wheat;
+        box-shadow: 0 0 8px rgba(245, 222, 179, 0.3);
+    }
+
+    .b button {
+        padding: 6px;
+        font-size: 10px;
+        border-radius: 6px;
+        border: 1px solid wheat;
+    }
+}
+    </style> 
+
+
+
+<div class="thanks animate__animated animate__fadeInRightBig" >
+    <h1 >Thank you for applying to Global Ques Technologies! Your application has been successfully submitted. We're excited to review your details and will get back to you soon. Stay tuned for updates on your journey with GQT!..</h1>
+
+    <div class="b animate__animated animate__fadeInBottomRight" style="display: flex;align-items: center;justify-content: center;";>
+        <a href="index.html"><button style="padding: 10px;border-radius: 10px;background-color: rgba(0, 0, 0, 0.5);color: wheat  ;font-size: 14px; border: 2px solid wheat;">Back To Home</button></a>
+    </div>
+</div>
+    </body>
+    </html>

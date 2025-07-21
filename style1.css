@@ -1,0 +1,124 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    background-image: linear-gradient(-103deg,rgb(25, 25, 110),rgb(0, 0, 0));
+    
+}
+
+/*-------------Code starts here----------------------*/
+/*------------nav-container code --------------------*/
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 70px;
+}
+
+.nav-container .logo-and-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;  
+}
+
+.nav-container .nav-menu {
+    display: flex;
+    margin-left: 40px;
+}
+
+.nav-container .nav-menu li {
+    list-style: none;
+    padding: 50px;
+    font-size: 20px;
+    transition: all 0.4s;
+}
+.nav-container .nav-menu .item:hover{
+   
+    transform: scale(1.2,1.2);
+}
+
+/*---------------------------------nav-container code ends here------------------------------------>
+
+/*------------------------------------ Hamburger menu styles----------------------------------- */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(3, 3, 30, 0.98);
+    backdrop-filter: blur(10px);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.hamburger-menu.active {
+    left: 0;
+    display: block;
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hamburger-menu ul li {
+    padding: 20px 0;
+}
+
+.hamburger-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+/*---------------- Media query for responsive design---------------------*/
+@media (max-width: 900px) {
+    .nav-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .nav-container .logo-and-name {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-container .nav-menu .item {
+        display: none;
+    }
+    
+    .nav-container .nav-menu .icon {
+        display: block !important;
+    }
+}
+
+@media (min-width: 756px) {
+    .nav-container .nav-menu .icon {
+        display: none;
+    }
+}
